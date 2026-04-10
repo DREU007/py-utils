@@ -22,7 +22,7 @@ class Telegram:
 
     @classmethod
     def escape_md2(cls, text: str) -> str:
-        return cls.__MD2_ESCAPE_RE.sub(r'\\\1', text)
+        return cls.__MD2_ESCAPE_RE.sub(r'\\\1', str(text))
 
     @staticmethod
     def _make_error_msg(e) -> str:
